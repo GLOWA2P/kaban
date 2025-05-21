@@ -1,0 +1,26 @@
+Zmiany w kodzie gry 2D:
+
+1. Mapa:
+- Zamiast generowania losowego terenu, mapa jest teraz wczytywana z pliku tekstowego.
+- Plik mapy zawiera wiersze z liczbami okreœlaj¹cymi typ terenu na ka¿dym polu.
+- Mapa przechowywana jest w tablicy dwuwymiarowej int[,] o wymiarach odpowiadaj¹cych plikowi.
+
+2. Wizualizacja mapy:
+- Zamiast rysowaæ na Canvasie, ka¿dy segment mapy to kontrolka Image umieszczona w siatce Grid.
+- Siatka jest dynamicznie tworzona na podstawie rozmiaru mapy (iloœæ wierszy i kolumn).
+- Obrazki terenu (las, ³¹ka, ska³y) s¹ ³adowane z plików i przypisywane do poszczególnych pól.
+
+3. Gracz:
+- Gracz reprezentowany jest przez kontrolkê Image dodan¹ do siatki.
+- Pozycja gracza jest przechowywana w zmiennych pozycjaGraczaX i pozycjaGraczaY.
+- Ruch gracza odbywa siê za pomoc¹ klawiszy strza³ek, z blokad¹ wyjœcia poza mapê i wejœcia na pole ska³.
+
+4. Interakcje:
+- Dodano mo¿liwoœæ wycinania lasu (pole LAS) przez naciœniêcie klawisza C.
+- Po wyciêciu lasu pole zamienia siê na ³¹kê (LAKA), a licznik drewna (iloscDrewna) wzrasta o 1.
+- Iloœæ zebranego drewna jest wyœwietlana w etykiecie.
+
+5. £adowanie mapy:
+- Dodano przycisk "Wczytaj mapê", który otwiera okno dialogowe wyboru pliku.
+- Po wybraniu pliku mapa jest wczytywana i odœwie¿ana na ekranie.
+
